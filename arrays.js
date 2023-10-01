@@ -31,6 +31,9 @@ for(let i=0;i<marks.length;i++)
     console.log(marks[i])
 }
 
+console.log("---")
+
+
 //Sum all of the elements from the array. 110 is correct
 var sum = 0
 for(let i=0;i<marks.length;i++)
@@ -39,5 +42,30 @@ for(let i=0;i<marks.length;i++)
 }
 console.log(sum)
 
+console.log("---")
+
+
 //reduce filter map
-marks.reduce((sum,totalMarks))
+let total = marks.reduce((sum,totalMarks)=>sum+totalMarks,0)
+console.log(total)
+
+// create new array with even number of the scores array
+var scores = [12,13,14,16]
+
+var evenScores = []
+
+for(let i = 0;i<scores.length;i++)
+{
+    if(scores[i] %2 == 0)
+    {
+        evenScores.push(scores[i])
+    }
+}
+console.log(evenScores)
+
+let newFilterEvenScores = scores.filter(score=>score%2==0)
+console.log(newFilterEvenScores) 
+
+//map array function from [ 12, 14, 16 ] => [ 36, 42, 48 ] - multipy by 3
+let newArray = newFilterEvenScores.map(score=>score*3)
+console.log(newArray)
