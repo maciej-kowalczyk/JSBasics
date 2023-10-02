@@ -69,3 +69,14 @@ console.log(newFilterEvenScores)
 //map array function from [ 12, 14, 16 ] => [ 36, 42, 48 ] - multipy by 3
 let newArray = newFilterEvenScores.map(score=>score*3)
 console.log(newArray)
+
+//sum newArray numbers
+let mappedArray = newFilterEvenScores.map(score=>score*3)
+console.log(mappedArray)
+let totalVal = mappedArray.reduce((sum,val)=>sum+val,0)
+console.log(totalVal)
+
+//All in one line
+var scores1 = [12,13,14,16]
+let sumValue = scores1.filter(score=>score%2==0).map(score=>score*3).reduce((sum,val)=>sum+val,0)
+console.log(sumValue)
