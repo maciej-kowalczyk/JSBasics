@@ -80,3 +80,24 @@ console.log(totalVal)
 var scores1 = [12,13,14,16]
 let sumValue = scores1.filter(score=>score%2==0).map(score=>score*3).reduce((sum,val)=>sum+val,0)
 console.log(sumValue)
+
+//sorting arrays with strings
+let fruits = ["banana", "mango", "pomegranate", "apple"]
+fruits.sort()
+console.log(fruits)
+
+fruits.reverse() //reverses the order
+console.log(fruits)
+
+//sorting arrays with numbers
+var scores1 = [16,11,14,9]
+console.log(scores1)
+scores1.sort(function(a,b){
+    return a - b
+})
+console.log(scores1)
+
+scores1.sort((a,b) => a - b)
+console.log(scores1)
+
+console.log(scores1.sort((a,b) => a - b))
