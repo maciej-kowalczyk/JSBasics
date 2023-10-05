@@ -1,3 +1,5 @@
+const Person = require('./Clases') //calls class from Clases.js file
+
 let day = 'tuesday '
 console.log(day.length) // count letters - 8
 let subDay = day.slice(0,4) //cut "tues" out
@@ -40,3 +42,8 @@ while(countDay !== -1)
     countDay = newQuote.indexOf("day",countDay+1)
 }
 console.log(count)
+
+
+//imported stuff from Clases.js
+let person = new Person("Alex", "Kamal")
+console.log(person.fullName())
