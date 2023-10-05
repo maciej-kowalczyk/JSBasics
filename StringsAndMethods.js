@@ -23,5 +23,20 @@ diff.toString() //converts number to string
 let newQuote = day + "is Funday"
 console.log(newQuote)
 
-//check at what index starts the word day in word funday
-newQuote.indexOf("day")
+//select the word day from newQuote. Search starts after 5th place
+let val = newQuote.indexOf("day",5) 
+console.log(val)
+
+//When searching word is not present the outcome will be -1
+let yey = newQuote.indexOf("yey")
+console.log(yey)
+
+//How many times the word "day" is present? 
+let count = 0
+let countDay = newQuote.indexOf("day")
+while(countDay !== -1)
+{
+    count++
+    countDay = newQuote.indexOf("day",countDay+1)
+}
+console.log(count)
